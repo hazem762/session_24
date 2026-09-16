@@ -1,0 +1,138 @@
+// @use "sass:map";
+
+// $firstColor: #f00;
+// $list: (#f00, #0f0, #00f);
+// $map:(
+//     'red' :#f00,
+//     'green' :#0f0,
+//     'blue' :#00f
+// );
+// .box {
+//     color: $firstColor;
+//     color: nth($list , 1);
+//     color: map-get($map,'red');
+// }
+
+// .box {
+//     color: nth($list , 3);
+//     color: map-get($map,'blue');
+
+// }
+
+// .parent {
+//     background-color: aqua;
+
+//     .child {
+//         color: red;
+    
+//         .box {
+//             font-size: 25px;
+
+//             a {
+//                 font-weight: 300;
+                
+//                 &:hover {
+//                     color: yellow;
+//                 }
+//             }
+//         }
+//     }
+
+// }
+
+// $colorName: "gfsdh";
+
+// .box {
+//     @if ($colorName == "white") {
+//         color: #fff;
+
+//     }@else if ($colorName == "black") {
+//         color: #000;
+
+//     }@else {
+//         color: #09c;
+
+//     }
+// }
+
+// $sizes: (40, 50, 60);
+
+// @for $i from 1 to 4 {
+//     .box#{$i} {
+//         font-size: nth($sizes, $i) * 1px;
+//     }
+// }
+
+// $colors : (
+//     'red' : #f00,
+//     'green' : #0f0,
+//     'blue' : #00f
+// );
+
+// @each $key, $value in $colors {
+//     .#{$key} {
+//         background-color: $value;
+//     }
+// }
+
+// @use "abstracts/variables" as *;
+
+// .box {
+//     font-family: $mainFont;
+//     width: $mainWidth;
+// }
+
+// @use "abstracts/shares";
+
+// @use "components/cards";
+
+// .box {
+//     color: shares.$mainColor;
+// }
+
+// @mixin center ($JC : center, $AI : center) {
+//     display: flex;
+//     justify-content: $JC;
+//     align-items: $AI;
+// }
+
+// .box {
+//     @include center ($AI : flex-start);
+// }
+
+// @mixin respond ($breakPoint) {
+//     @if ($breakPoint == mobile) {
+//         @media (max-width: 600px) {
+//             @content;
+//         }
+//     } @else if ($breakPoint == tablet) {
+//         @media (max-width: 900px) {
+//             @content;
+//         }
+//     }
+// }
+
+// .box {
+//     background-color: #09c;
+//     color: #f00;
+//     font-size: 50px;
+//     @include respond(mobile) {
+//         font-size: 30px;
+//         color: #0f0;
+//     }
+
+//     @include respond(tablet) {
+//         font-size: 40px;
+//         color: #00f;
+//     }
+
+// }
+
+// @function sum($x , $y) {
+//     @return $x +$y;
+// }
+
+// .box {
+//     font-size: sum(20, 25) * 1px;
+// }
+
